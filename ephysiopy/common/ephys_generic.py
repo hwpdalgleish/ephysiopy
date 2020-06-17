@@ -917,6 +917,7 @@ class MapCalcsGeneric(object):
 				rmap = self.makeRateMap(cluster, ax0)
 				ax2 = fig.add_subplot(2, 3, 3)
 				d = self.makeSAC(rmap, cluster, ax2)
+				ax2.set_title("Gridscore: {:.2f}".format(d['gridness']))
 				print("Gridscore: {:.2f}".format(d['gridness']))
 				ax3 = fig.add_subplot(2, 3, 4, projection='polar')
 				self.makeHDPlot(cluster, ax3, add_mrv=True)
